@@ -12,7 +12,7 @@ You MUST update the iRobot Create 2 Firmware to the latest to avoid incorrect se
 
 > The download will ONLY work on Windows computers; we have tested on Win 7 and 10. Connect your robot to your computer with the Create cable. You will need to unzip, download and install the `.exe` file, and then pick one of the two firmware `.enc` files provided and input your serial port corresponding to the Create cable. If you don’t pick the right one for your robot, it will fail but then just pick the other one! Click start. You will have either Firmware 3.7.8 or 3.8.2 depending on your processor when finished.
 
-See `./iRobotCreate2_Update_Windows` directory in Cornell Box for update tool and firmware files. Please send email to create@irobot.com if you have more questions.
+See `./iRobotCreate2_Update_Windows` directory in Cornell Box for update tool and firmware files. Please send an email to create@irobot.com if you have more questions.
 
 # Modify, Build, and Install `pycreate2` Package
 
@@ -37,9 +37,9 @@ See `./iRobotCreate2_Update_Windows` directory in Cornell Box for update tool an
 
 # Robot Arm Control via Raspberry Pi
 
-> WARNING: Do NOT press any button on the arm controller board.
+> WARNING! Do NOT press any button on the arm controller board.
 
-> Please also refer the [official tutorial documentation](https://www.hiwonder.com/store/learn/42.html) from Hiwonder.
+> Please also refer to the [official tutorial documentation](https://www.hiwonder.com/store/learn/42.html) from Hiwonder.
 
 The Hiwonder xArm 1S robot arm communicates with Raspberry Pi using serial communication protocol. To set up a serial port connection,
 
@@ -78,4 +78,4 @@ arm.write(b'\x55\x55\x02\x07')
 arm.write(b'\x55\x55\x05\x06\x02\x01\x00')
 ```
 
-If you want to define more positions, please refer to [Hiwonder's tutorial](https://www.hiwonder.com/store/learn/42.html). The recommanded way is to use their official PC software. You need to connect the arm controller board to your PC. In "Manual Coding" mode, manually put the servo positions of the arm to desired position and click "Read Angle". Then choose a new position ID for this setting and click "Download" to save the position to the arm controller board. Carefully double check the position ID before downloading, the data in the controller board cannnot be reverted.
+If you want to define more positions, please refer to [Hiwonder's tutorial](https://www.hiwonder.com/store/learn/42.html). The recommended way is to use their official PC software. You need to connect the arm controller board to your PC. In "Manual Coding" mode, manually put the servo positions of the arm to the desired position and click "Read Angle". Then choose a new position ID for this setting and click "Download" to save the position to the arm controller board. Carefully double-check the position ID before downloading, the data in the controller board cannot be reverted.
